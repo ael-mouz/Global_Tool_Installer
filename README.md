@@ -5,7 +5,7 @@ This script is a bash script that helps you install various tools globally using
 ### Prerequisites
 Before using this script, make sure you have the following prerequisites installed:
 
-- npm: Node Package Manager (npm) is required to install the tools. You can install it by installing ~~Node.js~~.
+- npm: Node Package Manager (npm) is required to install the tools. You can install it by installing [Node.js](https://nodejs.org/).
 
 ### Usage
 To use this script, follow these steps:
@@ -30,24 +30,33 @@ To use this script, follow these steps:
 7. Once the installation is complete, the script will display a success message for each installed tool.
 
 ### Tools
-1. Create a build of your React app: `npm run build`
+The script supports the installation of the following tools:
+- Serve: `serve`
+- Yarn: `yarn`
+- Gulp: `gulp`
+- Grunt: `grunt`
+- Webpack: `webpack`
+- Babel: `babel-cli`
+- ESLint: `eslint`
+- TypeScript: `typescript`
+- Create React App: `create-react-app`
+- Angular CLI: `@angular/cli`
+- Vue CLI: `@vue/cli`
+- Prettier: `prettier`
+- Lodash: `lodash`
+- Express Generator: `express-generator`
+- Nodemon: `nodemon`
 
-2. Serve the build using `serve`:
+Note: The tool names listed above are the names used in the menu for selection. The corresponding npm package names are mentioned after the colon.
+### Customization
+You can modify the script to add or remove tools according to your needs. To add a new tool, follow these steps:
+1. Open the script file in a text editor.
+2. Locate the tools array declaration.
+3. Add a new entry in the format `"Tool Name: npm-package-name"` to the `tools` array. Replace `Tool Name` with the name you want to display in the menu and `npm-package-name` with the actual npm package name.
+Example: To add a tool named "My Tool" with the npm package name `my-tool`, add the following entry:
 
-```shell
-serve -s build
+```bash
+    "My Tool: my-tool"
 ```
-
-3. The app should now be accessible at `http://localhost:5000`
-
-### 🐛 Troubleshooting
-- If you encounter issues serving the app, make sure that you've installed the `serve` package globally and that your `PATH` variable is set up correctly.
-
-- If you see a "port already in use" error, try specifying a different port with the `-l` option, for example:
-
-```shell
-serve -s build -l 3000
-```
-
-### 💡 Conclusion
-That's it! You should now have a React app up and running using `serve`. If you have any issues or questions, feel free to reach out for help.
+4. Save the script file.
+Now, when you run the script, your new tool will be available in the menu for installation.
