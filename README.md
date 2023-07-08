@@ -1,31 +1,35 @@
-# 🚀 How to Serve a React App Using npm and serve
-
-This README provides instructions for serving a React app using npm and the serve package.
-
-### 📋 Prerequisites
-Before starting, you'll need to have the following installed on your system:
-
+# Global Tool Installer
+This script is a bash script that helps you install various tools globally using npm. It provides a menu-based interface to select and install individual tools or install all tools at once.
 - Node.js and npm
 
-### 🔧 Installation
-1. Create a new directory for your React app: `mkdir my-react-app`
+### Prerequisites
+Before using this script, make sure you have the following prerequisites installed:
 
-2. Change into the new directory: `cd my-react-app`
+- npm: Node Package Manager (npm) is required to install the tools. You can install it by installing ~~Node.js~~.
 
-3. Initialize a new npm project: `npm init -y`
+### Usage
+To use this script, follow these steps:
+1. Copy the script code into a file and save it with a `.sh` extension (e.g., `install-tools.sh`).
 
-4. Install the React dependencies: `npm install react react-dom`
+2. Open a terminal and navigate to the directory where you saved the script.
 
-5. Install the `serve` package globally:
-
-```shell
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
-export PATH=~/.npm-global/bin:$PATH
-npm install -g serve
+3. Make the script file executable by running the following command:
+```bash
+    chmod +x install-tools.sh
 ```
 
-### 🚀 Building the App
+4. Run the script using the following command:
+```bash
+    ./install-tools.sh
+```
+
+5. The script will display a menu with a list of available tools. Enter the number corresponding to the tool you want to install or enter `0` to install all tools.
+
+6. The script will install the selected tool(s) globally using npm. If you chose to install all tools, it will install each tool one by one.
+
+7. Once the installation is complete, the script will display a success message for each installed tool.
+
+### Tools
 1. Create a build of your React app: `npm run build`
 
 2. Serve the build using `serve`:
