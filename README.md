@@ -46,6 +46,7 @@ The script supports the installation of the following tools:
 - Lodash: `lodash`
 - Express Generator: `express-generator`
 - Nodemon: `nodemon`
+- ...
 
 Note: The tool names listed above are the names used in the menu for selection. The corresponding npm package names are mentioned after the colon.
 ### Customization
